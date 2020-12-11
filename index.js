@@ -44,28 +44,24 @@ class Airplane {
   // Creating Person class
  class Person {
   constructor(name, age) {
-    // Creating and Initialzing contructor method with parameters for Person class.
     this.name = name;
     this.age = age; 
-    this.stomach = []; // Creating objects that it belongs too.
+    this.stomach = [];
   }
 
-  // Method of eat passing with someFood Argument
   eat(someFood) {
-    // Setting conditional if 10 items are less will execute
     if (this.stomach.length < 10) {
-      this.stomach.push(someFood); // Push to stomach array if condition is met.
+      this.stomach.push(someFood);
     }
   }
 
-  // Crating poop method.
   poop() {
-    return this.stomach = []; // If invoke, will return stomach as empty
+    return this.stomach = [];
   }
 
   // Passing class toString
   toString() {
-    return `${this.name}, ${this.age}`; // return Template literals if invoke with arguments of name and age
+    return `${this.name}, ${this.age}`;
   }
 }
   
@@ -121,8 +117,16 @@ class Airplane {
           + {name} and {location} of course come from the instance's own properties.
   */
  class Lambdasian {
-    
+  constructor(object) {
+    this.name = object.name;
+    this.age = object.age;
+    this.location = object.location;
   }
+
+  speak() {
+    return `Hello, my name is ${this.name}, I am from ${this.location}`
+  }
+}
   
   /*
     TASK 4
